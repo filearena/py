@@ -1,0 +1,21 @@
+Practical 2.5 : Filtering and Maximum Value Extraction
+
+• Create a NumPy array.
+• Apply filtering techniques.
+• Return maximum values from the array using conditional  filtering.
+
+code :- 
+
+import numpy as np
+# Create a NumPy array
+arr = np.array([10, 25, 15, 40, 30, 50, 20])
+print("Original Array:")
+print(arr)
+# Filtering values greater than 25
+filtered = arr[arr > 25]
+print("Values greater than 25:")
+print(filtered)
+# Find maximum value from the filtered array
+max_value = np.max(filtered)
+print("Maximum value from filtered array:")
+print(max_value)
