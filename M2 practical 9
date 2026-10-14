@@ -1,0 +1,37 @@
+Practical 9 : Boolean Filtering in Pandas Series
+
+• Demonstrate filtering of Pandas Series using Boolean arrays.
+• Apply conditional selection techniques
+series > 50
+
+code :- 
+
+import pandas as pd
+# Create a Pandas Series
+marks = pd.Series({
+    "Amit": 75, "Sneha": 45,
+    "Rahul": 82,"Priya": 60, "Neha": 35
+})
+print("Original Series:")
+print(marks)
+
+# Create a Boolean array
+condition = marks >= 50
+
+print("\nBoolean Array:")
+print(condition)
+
+# Filter values greater than or equal to 50
+filtered_marks = marks[condition]
+
+print("\nStudents with marks >= 50:")
+print(filtered_marks)
+
+# Direct conditional filtering
+print("\nStudents with marks > 70:")
+print(marks[marks > 70])
+
+# Filter marks between 50 and 80
+print("\nStudents with marks between 50 and 80:")
+print(marks[(marks >= 50) & (marks <= 80)])
+
