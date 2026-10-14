@@ -1,0 +1,52 @@
+Practical no 7
+
+code :- 
+
+import pandas as pd
+
+data = {
+    "Name": ["Amit", "Rahul", "Priya", "Sneha", "Vikas"],
+    "Age": [20, 21, 20, 22, 21],
+    "Marks": [85, 78, 92, 88, 70],
+    "Attendance": [90, 85, 95, 91, 80]
+}
+df = pd.DataFrame(data)
+
+df.to_csv("students.csv", index=False)
+print("CSV file created successfully!")
+df = pd.read_csv("students.csv")
+print(df)
+import pandas as pd
+# Load CSV file
+df = pd.read_csv("students.csv")
+
+# Display the dataset
+print("Student Dataset:")
+print(df)
+
+# Display statistical summary
+print("\nStatistical Summary:")
+print(df.describe())
+
+# Calculate mean
+print("\nMean:")
+print(df["Marks"].mean())
+
+# Calculate median
+print("\nMedian:")
+print(df["Marks"].median())
+# Calculate mode
+print("\nMode:")
+print(df["Marks"].mode()[0])
+# Calculate minimum
+print("\nMinimum:")
+print(df["Marks"].min())
+# Calculate maximum
+print("\nMaximum:")
+print(df["Marks"].max())
+# Calculate standard deviation
+print("\nStandard Deviation:")
+print(df["Marks"].std())
+# Calculate variance
+print("\nVariance:")
+print(df["Marks"].var())
