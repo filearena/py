@@ -1,0 +1,54 @@
+Practical 1: Introduction to Python & Output Statements
+
+• Write a Python program to print personal profile details.
+
+# Personal Profile Details
+
+Code :-
+
+name shravan jagdale"
+age = 22
+city = "Mumbai"
+qualification = "M.Sc. (chemistry)"
+profession = " Aavation"
+
+print("----- Personal Profile -----")
+print("Name :", name
+print("Age:", age)
+print("City :", city)
+print("Qualification :", qualification)
+print("Profession :", profession)
+
+output :-
+------ Personal Profile -----
+Name: shravan jagdale
+Age: 22
+City: Mumbai
+Qualification: M.Sc. (chemistry)
+Profession: Aavation
+
+• Use formatted output statements.
+#Formatted Output Statements in Python
+
+name = "Alice"
+age = 20
+marks = 89.5
+pi = 3.14159265
+
+print("Using f-strings:")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Marks: {marks:.2f}")
+print(f"Pi: {pi:.3f)")
+
+print("\nUsing format() method:")
+print("Name: {}".format(name))
+print("Age: {}".format(age))
+print("Marks: {:.2f}".format(marks))
+print("Pi: {:.3f}".format(pi))
+
+print("\nUsing % formatting:") 
+print("Name: %s" % name)
+print("Age: %d" % age) 
+print("Marks: %.2f" % marks) 
+print("Pi: %.3f" % pi)
