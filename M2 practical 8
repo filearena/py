@@ -1,0 +1,49 @@
+Practical 8 : Creating Pandas Series
+
+• Create Pandas Series from dictionaries.
+• Access and manipulate series elements
+
+code :- 
+
+import pandas as pd
+
+# Create a dictionary
+data = {
+    "Maths": 85,
+    "Science": 90,
+    "English": 78,
+    "Computer": 95
+}
+
+# Create Pandas Series from dictionary
+series = pd.Series(data)
+
+# Display the Series
+print("Original Series:")
+print(series)
+
+# Access an element using index
+print("\nMarks in Maths:")
+print(series["Maths"])
+
+# Access multiple elements
+print("\nMarks in Maths and Science:")
+print(series[["Maths", "Science"]])
+
+# Add a new element
+series["Hindi"] = 82
+
+print("\nAfter adding Hindi:")
+print(series)
+
+# Modify an element
+series["English"] = 85
+
+print("\nAfter modifying English:")
+print(series)
+
+# Delete an element
+series = series.drop("Computer")
+
+print("\nAfter deleting Computer:")
+print(series)
