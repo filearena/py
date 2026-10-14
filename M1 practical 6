@@ -1,0 +1,44 @@
+Practical 6 : Tuples and Nested TupleS.
+
+• Create nested tuples.
+• Access elements from nested tuples.
+
+code :- 
+
+# A simple tuple
+subjects = ("Python", "Statistics", "DBMS", "Machine Learning")
+print("Subjects tuple :", subjects)
+print("First subject :", subjects[0])
+print("Last subject :", subjects[-1])
+
+output :- 
+
+Subjects tuple : ('Python', 'Statistics', 'DBMS', 'Machine Learning')
+First subject : Python
+Last subject : Machine Learning
+
+# A nested tuple 
+
+code :- 
+
+# A nested tuple: each student's (name, (marks1, marks2, marks3))
+students = ( ("Aarav", (78, 85, 92)), ("Diya", (88, 79, 95)), ("Rohan", (65, 70, 60)))
+print("\nNested tuple of students:")
+print(students)
+# Accessing elements from a nested tuple
+print("\nName of first student :", students[0][0])
+print("Marks of first student :", students[0][1])
+print("Second subject marks of student2:", students[1][1][1])
+# Iterating through a nested tuple
+print("\nStudent-wise marks:")
+for name, marks in students:
+   print(f" {name}: {marks} (Total = {sum(marks)})")
+
+output :- 
+
+Nested tuple of students:
+(('Aarav', (78, 85, 92)), ('Diya', (88, 79, 95)), ('Rohan', (65, 70, 60)))
+
+Name of first student : Aarav
+Marks of first student : (78, 85, 92)
+Second subject marks of student2: 79
