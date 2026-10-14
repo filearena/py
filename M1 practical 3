@@ -1,0 +1,58 @@
+Practical 3: Mathematical Functions
+
+• Write a program to calculate the square root of a number.
+
+code :-
+
+import math
+
+num = float(input("Enter a number: "))
+
+if num >= 0:
+    square_root = math.sqrt(num)
+    print ("Square root of", num, "is", square_root) 
+else:
+    print("Square root of a negative number is not possible.")
+
+output :-
+
+Enter a number: 5 
+Square root of 5.0 is 2.23606797749979
+
+• Explore use of the math module.
+The math module provides many built-in 
+mathematical functions such as sqrt(), pow(), ceil(), 
+floor(), factorial(), trigonometric functions, and 
+logarithmic functions, making mathematical 
+calculations simple and efficient in Python.
+
+code :-
+
+import math
+
+num = float(input("Enter a number: "))
+
+print("Square Root:", math.sqrt(num))
+print("Power (Square):", math.pow(num, 2))
+print("Ceiling Value:", math.ceil(num))
+print("Floor Value:", math.floor(num))
+print("Factorial of 5:", math.factorial (5))
+print("Value of Pi:", math.pi)
+print("Value of e:", math.e)
+print("Sine of 30°:", math.sin(math.radians(30)))
+print("Cosine of 60°:", math.cos (math.radians (60)))
+print("Logarithm (base e):", math.log(num))
+
+output :-
+
+Enter a number: 2
+Square Root: 1.4142135623730951
+Power (Square): 4.0
+Ceiling Value: 2
+Floor Value: 2
+Factorial of 5: 120
+Value of Pi: 3.141592653589793
+Value of e: 2.718281828459045
+Sine of 30°: 0.49999999999999994
+Cosine of 60°: 0.5000000000000001
+Logarithm (base e): 0.6931471805599453
