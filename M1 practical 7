@@ -1,0 +1,50 @@
+Practical 7 : Sorting and Tuple Properties
+
+Aim: To sort nested tuples using the sorted() function, and to verify the immutability property of tuples.
+
+Program 7.1 — Sorting nested tuples using sorted()
+
+code :- 
+
+students = [("Aarav", 78),("Diya", 88),("Rohan", 65), ("Isha", 91)]
+# Sort by marks (ascending) using a lambda key
+sorted_by_marks_asc = sorted(students, key=lambda item: item[1])
+print("Sorted by marks (ascending) :", sorted_by_marks_asc) 
+# Sort by marks (descending)
+sorted_by_marks_desc = sorted(students, key=lambda item: item[1], reverse=True)
+print("Sorted by marks (descending):", sorted_by_marks_desc)
+# Sort by name (alphabetically)
+sorted_by_name = sorted(students, key=lambda item: item[0])
+print("Sorted by name :", sorted_by_name)
+
+output :- 
+
+Sorted by marks (ascending) : [('Rohan', 65), ('Aarav', 78), ('Diya', 88), ('Isha', 91)]
+Sorted by marks (descending): [('Isha', 91), ('Diya', 88), ('Aarav', 78), ('Rohan', 65)]
+Sorted by name : [('Aarav', 78), ('Diya', 88), ('Isha', 91), ('Rohan', 65)]
+
+Program 7.2 — Verifying the immutability property of tuples
+
+code:- 
+
+my_tuple = (10, 20, 30)
+print("Original tuple:", my_tuple)
+try:
+ my_tuple[0] = 99 # attempting to modify a tuple element
+except TypeError as e:
+ print("Error:", e)
+ print("This confirms that tuples are IMMUTABLE -- their elements cannot be changed after creation.")
+# NOTE: a tuple containing a mutable object (like a list) still cannot have
+# its own slots reassigned, but the *contents* of that mutable object can change.
+nested = (1, 2, [3, 4])
+nested[2].append(5)
+print("\nTuple with a mutable list inside, after modifying the list:", nested)
+print("The tuple's own elements (slots) are unchanged; only the inner list's contents changed.")
+
+output :- 
+
+Original tuple: (10, 20, 30)
+Error: 'tuple' object does not support item assignment
+This confirms that tuples are IMMUTABLE -- their elements cannot be changed after creation.
+Tuple with a mutable list inside, after modifying the list: (1, 2, [3, 4, 5])
+The tuple's own elements (slots) are unchanged; only the inner list's contents changed.
