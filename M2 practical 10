@@ -1,0 +1,45 @@
+Practical no 10
+
+Combine NumPy arrays and Pandas DataFrames.
+• Perform sorting, filtering, and basic statistical operations on a
+dataset.
+
+code :- 
+
+import numpy as np
+import pandas as pd
+
+# Step 1: Create a NumPy array
+marks = np.array([85, 72, 90, 65, 78])
+
+# Step 2: Create a Pandas DataFrame
+data = {
+    "Name": ["Amit", "Rahul", "Priya", "Neha", "Sneha"],
+    "Age": [20, 21, 19, 22, 20],
+    "Marks": marks
+}
+
+df = pd.DataFrame(data)
+
+print("Original Dataset:")
+print(df)
+
+# Step 3: Sorting
+print("\nDataset sorted by Marks:")
+print(df.sort_values(by="Marks"))
+
+# Step 4: Filtering
+print("\nStudents with Marks greater than 75:")
+print(df[df["Marks"] > 75])
+
+# Step 5: Basic statistical operations
+print("\nStatistical Information:")
+print("Mean Marks:", df["Marks"].mean())
+print("Median Marks:", df["Marks"].median())
+print("Maximum Marks:", df["Marks"].max())
+print("Minimum Marks:", df["Marks"].min())
+print("Standard Deviation:", df["Marks"].std())
+
+# Step 6: Describe the dataset
+print("\nStatistical Summary:")
+print(df.describe())
