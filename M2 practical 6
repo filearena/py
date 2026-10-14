@@ -1,0 +1,22 @@
+Practical 6 : Introduction to Pandas Library
+
+• Import pandas library.
+• Create a DataFrame object using lists and dictionaries
+Using list
+
+code :- 
+
+names = ["Amit", "Priya", "Rahul", "Sneha"]
+df1 = pd.DataFrame(names, columns=["Name"])
+print("DataFrame using List:", df1)
+print(df1)
+# Creating DataFrame using a dictionary
+data = {
+   "Name": ["Amit", "Priya", "Rahul", "Sneha"],
+    "Age": [20, 21, 19, 22],
+    "Marks": [85, 90, 78, 88]
+}
+df2 = pd.DataFrame(data)
+print("\nDataFrame using Dictionary:")
+print(df2)
+
