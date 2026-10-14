@@ -1,0 +1,44 @@
+Practical 5 : Variable Handling
+
+• Write a program to swap two variables (with and without temporary 
+variable).
+
+Program 5.1 — Swapping using a temporary variable
+
+code :- 
+
+x = int(input("Enter value of x: "))
+y = int(input("Enter value of y: "))
+print(f"\nBefore swapping: x = {x}, y = {y}")
+temp = x
+x = y
+y = temp
+print(f"After swapping (using temp variable): x = {x}, y = {y}")
+
+output :- 
+
+Enter value of x: 2
+Enter value of y: 3
+Before swapping: x = 2, y = 3
+After swapping (using temp variable): x = 3, y = 2
+
+Program 5.2 — Swapping WITHOUT a temporary variable
+
+code :- 
+
+x = int(input("Enter value of x: "))
+y = int(input("Enter value of y: "))
+print(f"\nBefore swapping: x = {x}, y = {y}")
+# --- Method A: Arithmetic operators ---
+x = x + y
+y = x - y
+x = x - y
+print(f"After swapping (arithmetic method): x = {x}, y = {y}")
+
+output :- 
+
+================
+Enter value of x: 5 
+Enter value of y: 10
+Before swapping: x = 5, y = 10
+After swapping (arithmetic method): x = 10, y = 5
