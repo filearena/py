@@ -1,0 +1,51 @@
+Practical 10 : Date, Time and Calendar Module 
+
+• 10.1 Print current date in different formats.
+
+code :- 
+
+from datetime import datetime
+now = datetime.now()
+print("Current Date:", now)
+print("DD-MM-YYYY :", now.strftime("%d-%m-%Y"))
+print("MM/DD/YYYY :", now.strftime("%m/%d/%Y"))
+print("Day Month Year :", now.strftime("%d %B %Y"))
+print("Day Name :", now.strftime("%A"))
+
+• 10 .2Convert timestamp to datestamp.
+
+code :- 
+
+import time
+timestamp = time.time()
+print("Timestamp:", timestamp)
+date = time.ctime(timestamp)
+print("Datestamp:", date)
+
+• 10.3 Compare two dates.
+
+code :- 
+
+from datetime import datetime
+date1 = input("Enter First Date (DD-MM-YYYY): ")
+date2 = input("Enter Second Date (DD-MM-YYYY): ")
+d1 = datetime.strptime(date1, "%d-%m-%Y")
+d2 = datetime.strptime(date2, "%d-%m-%Y")
+if d1 > d2:
+ print("First date is later.")
+elif d1 < d2:
+ print("Second date is later.")
+else:
+ print("Both dates are equal.")
+
+•10.4 Display monthly/yearly calendar using calendar module.
+
+code :-
+
+import calendar
+year = int(input("Enter Year: "))
+month = int(input("Enter Month (1-12): "))
+print("\nMonthly Calendar\n")
+print(calendar.month(year, month))
+print("\nYearly Calendar\n")
+print(calendar.calendar(year))
