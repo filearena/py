@@ -1,0 +1,33 @@
+Practical 2 : Basic Operations on NumPy Array 
+
+• Perform arithmetic operations (addition, subtraction, 
+multiplication, division) on a single array.
+
+code :- 
+
+import numpy as np
+# Create a NumPy array
+arr = np.array([10, 20, 30, 40, 50])
+print("Original Array:", arr)
+# Arithmetic operations
+print("Addition (+10):", arr + 10)
+print("Subtraction (-5):", arr - 5)
+print("Multiplication (*2):", arr * 2)
+print("Division (/2):", arr / 2)
+• Demonstrate element-wise operations.
+import numpy as np
+
+# Create two NumPy arrays
+
+code :- 
+
+arr1 = np.array([10, 20, 30, 40, 50])
+arr2 = np.array([1, 2, 3, 4, 5])
+print("Array 1:", arr1)
+print("Array 2:", arr2)
+# Element-wise operations
+print("Element-wise Addition:", arr1 + arr2)
+print("Element-wise Subtraction:", arr1 - arr2)
+print("Element-wise Multiplication:", arr1 * arr2)
+print("Element-wise Division:", arr1 / arr2)
+
