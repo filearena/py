@@ -1,0 +1,15 @@
+Practical 4 : Sorting and Searching in Arrays
+
+• Write a program to sort an array alphabetically.
+• Demonstrate sorting of numeric arrays
+
+code :- 
+
+# Program to sort an array alphabetically
+fruits = ["Mango", "Apple", "Banana", "Orange", "Grapes"]
+print("Original array:", fruits)
+fruits.sort()
+print("Alphabetically sorted array:", fruits)
+In descending order 
+fruits.sort(reverse=True)
+print(fruits)
