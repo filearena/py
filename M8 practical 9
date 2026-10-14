@@ -1,0 +1,45 @@
+Practical 9 : String and File Handling
+
+PRACTICAL 9.1 Store and search text in a variable.
+
+code :- 
+
+text = "Python is a simple and powerful programming language."
+print("Text:")
+print(text)
+word = input("Enter the word to search: ")
+if word.lower() in text.lower():
+ print("Word found in the text.")
+else:
+ print("Word not found.")
+
+Program 9.2: Retrieve Data from an HTML File
+
+Step 1
+
+Create a file named sample.html
+
+<html>
+<head>
+<title>My Web Page</title>
+</head>
+
+<body>
+<h1>Welcome to Python</h1>
+<p>This is HTML File.</p>
+</body>
+
+</html>
+
+Step 2
+
+Python Program
+
+from bs4 import BeautifulSoup
+with open("sample.html", "r") as file:
+ html_content = file.read()
+soup = BeautifulSoup(html_content, "html.parser")
+title = soup.title.string
+heading = soup.h1.text
+print("Title:", title)
+print("Heading:", heading)
