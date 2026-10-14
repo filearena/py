@@ -1,0 +1,83 @@
+Practical 8: List Operations
+
+Aim: To create lists and copy/clone a list using different methods.
+
+Program 8.1 — Creating and performing basic operations on lists
+
+code :- 
+
+marks = [78, 85, 92, 65, 88]
+print("Original list :", marks) 
+marks.append(95)
+print("After append(95) :", marks)
+marks.insert(2, 100)
+print("After insert(2, 100) :", marks)
+marks.remove(65)
+print("After remove(65) :", marks)
+marks.sort()
+print("After sort() :", marks)
+marks.reverse()
+print("After reverse() :", marks)
+print("Length of list :", len(marks))
+print("Maximum value :", max(marks))
+print("Minimum value :", min(marks))
+
+output :- 
+
+Original list : [78, 85, 92, 65, 88]
+After append(95) : [78, 85, 92, 65, 88, 95]
+After insert(2, 100) : [78, 85, 100, 92, 65, 88, 95]
+After remove(65) : [78, 85, 100, 92, 88, 95]
+After sort() : [78, 85, 88, 92, 95, 100]
+After reverse() : [100, 95, 92, 88, 85, 78]
+Length of list : 6
+Maximum value : 100
+Minimum value : 78
+
+Program 8.2 — Copying / cloning a list using different methods
+
+code :-
+
+original = [1, 2, 3, 4, 5]
+# Method 1: Slicing
+copy1 = original[:]
+# Method 2: Using the list() constructor
+copy2 = list(original)
+# Method 3: Using the copy() method (shallow copy)
+copy3 = original.copy() # Method 4: Using list comprehension
+copy4 = [item for item in original]
+# Method 5: Using the copy module (deep copy -- important for nested lists)
+import copy as copy_module
+copy5 = copy_module.deepcopy(original)
+print("Original :", original)
+print("copy1 (slicing) :", copy1)
+print("copy2 (list()) :", copy2)
+print("copy3 (.copy()) :", copy3)
+print("copy4 (comprehension) :", copy4)
+print("copy5 (copy.deepcopy()) :", copy5)
+# Proving these are independent copies, not references to the same list
+copy1[0] = 999
+print("\nAfter modifying copy1[0] = 999:")
+print("original :", original) # remains unchanged
+print("copy1 :", copy1) # only copy1 is changed
+# Contrast: a plain assignment does NOT create a copy, it creates another reference
+reference = original
+reference[0] = 111
+print("\nAfter modifying 'reference' (a direct assignment, not a copy):")
+print("original :", original) # ALSO changes, because reference IS original
+print("reference :", reference)
+
+output :- 
+
+Original : [1, 2, 3, 4, 5]
+copy1 (slicing) : [1, 2, 3, 4, 5]
+copy2 (list()) : [1, 2, 3, 4, 5]
+copy3 (.copy()) : [1, 2, 3, 4, 5]
+copy4 (comprehension) : [1, 2, 3, 4, 5]
+copy5 (copy.deepcopy()) : [1, 2, 3, 4, 5]
+After modifying copy1[0] = 999:
+original : [1, 2, 3, 4, 5]
+copy1 : [999, 2, 3, 4, 5]
+After modifying 'reference' (a direct assignment, not a copy):
+original : [111, 2, 3, 4, 5]
+reference : [111, 2, 3, 4, 5]
